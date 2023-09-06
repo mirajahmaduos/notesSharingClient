@@ -1,0 +1,357 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+  
+  html{
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* ************************* Header Style ****************************  */
+  
+  .header{
+    background: url('../images/home.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 95vh;
+    width: 100%;
+  }
+  
+  .header .container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  
+  /* ***************************** Logo Style ************************** */
+  
+  .logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+  }   
+    
+  .logo span {
+    color: #f9004d;
+  }
+  
+  /* **************************** Navigation Bar Styling ************************ */
+  
+  .nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    /* top: 0px; */
+    /* left: 0; */
+    /* width: 100%; */
+    background-color:lightgray;
+    /* padding: 20px; */
+    /* z-index: 100; */
+    }
+    
+  .nav-items {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-left: 50px;
+  }
+  
+  ul li{
+    list-style: none;
+  }
+  
+  .nav-item{
+    position: relative;
+    display: inline-block;
+    margin: 0 20px 0 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+    /* text-transform: uppercase; */
+  }
+  
+  .nav-item a{
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s;
+  }
+  
+  .nav-bar a:hover{
+    color: #f9004d;
+  }
+  
+  .nav-bar::after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  /* *************************** DropDown Menu Style *****************************  */
+  
+  .dropdown {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:lightgray;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .nav-item:hover .dropdown-content {
+    display: block;
+    border-radius: 10px;
+  }
+  
+  .dropdown-content li {
+    padding: 10px;
+  }
+  
+  .dropdown-content li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* ************************** User Login style **************************  */
+  
+  .right{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    padding: 5px;
+  }
+    
+  .right li{
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  .right li{
+    text-decoration: none;
+    color: #f1f1f1;
+  }
+    
+  .right li:first-child {
+    margin-left: 0;
+  }
+  
+  .userlogin{
+    background-color: #3b3a3a84;
+    /* color: #000; */
+    padding: 4px 5px;
+    border: 2px solid transparent;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: transform .4s;
+  }
+  
+  .userlogin:hover{
+    color: white;
+  }
+  
+  #logoutBtn{
+    display: block;
+    margin: 0 20%;
+    padding: 5px 5px;
+    text-transform: uppercase;
+    background: #eb5656;
+    color: #f4f4f4;
+    outline: none;
+    border:none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    /* overflow: hidden; */
+  }
+  
+  
+  /* ************************* Main Heading Styling ******************* */
+  
+  .header-content{
+      position: absolute;
+      text-align: center;
+      color: #000;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+  
+  .main-heading{
+      text-transform: uppercase;
+  }
+  
+  .header-content::after{
+      content: '';
+      display: block;
+      clear: both;
+  }
+  
+  /* ********************************** Home Features Section Styling ************************** */
+  
+  .features{
+      margin-top: 5%;
+  }
+  
+  .container-box{
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .buttons{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    .ribbon-box {
+      flex-basis: 200px;
+      flex-grow: 1;
+      margin: 10px;
+      padding: 10px;
+    }
+    
+    .block {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      padding: 20px;
+      background-color: #f5f5f5;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+    
+    .block:hover {
+      background-color: #e5e5e5;
+    }
+    .font {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    
+  /* *********************************** Footer Styling **************************** */
+  
+  .footer{
+      margin-top: 5%;
+      background-color: rgba(128, 128, 128, 0.582);
+      text-align: center;
+  }
+  
+  
+  /* ********************************* Media Quries ******************************* */
+  
+    /* Media query for screens with a maximum width of 500px */
+  @media only screen and (max-width: 500px) {
+    .html{
+      font-size: 50%;
+    }
+  
+  .logo {
+    font-size: 15px;
+    }
+  
+  .nav-items {
+    margin-left: 15px;
+    font-size:x-small;
+    }
+    .nav-items .nav-item {
+      margin: 0 10px;
+    }
+  
+    .dropdown-content {
+      min-width: 120px;
+    }
+    
+    .dropdown-content li {
+      padding: 5px;
+    }
+  
+    .right {
+      font-size: xx-small;
+      top: 5px;
+      right: 0px;
+    }
+  
+    .main-heading {
+      font-size: 24px;
+    }
+  
+    .container {
+      max-width: 100%;
+    }
+  
+    .ribbon-box {
+      width: 100%;
+      margin-bottom: 20px;
+      display: block;
+    }
+  
+    .font {
+      font-size: 14px;
+    }
+  
+    .footer {
+      margin-top: 3%;
+    }
+  }
+  
+  /* Media query for screens with a minimum width of 501px up to a maximum width of 786px */
+  @media only screen and (min-width: 501px) and (max-width: 786px) {
+    .nav-items {
+      margin-left: 30px;
+    }
+  
+    .nav-items .nav-item {
+      margin: 0 15px;
+    }
+  
+    .dropdown-content {
+      min-width: 140px;
+    }
+    
+    .dropdown-content li {
+      padding: 10px;
+    }
+  
+    .right {
+      top: 10px;
+      right: 10px;
+    }
+  
+    .main-heading {
+      font-size: 30px;
+    }
+  
+    .container {
+      max-width: 90%;
+    }
+  
+    .ribbon-box {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+  
+    .font {
+      font-size: 18px;
+    }
+  
+    .footer {
+      margin-top: 4%;
+    }
+  }

@@ -1,0 +1,46 @@
+.about{
+    margin-top: 5%;
+}
+
+.abtcontainer{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.about-image{
+    width: 50%;
+    float: left;
+    height: 250px;
+}
+
+.about-photo{
+    max-width: 500px;
+    width: 90%;
+    height: 100%;
+    border-radius: 5px;
+    /* border: 1px solid black; */
+}
+
+.about-content{
+    width: 50%;
+    float: right;
+}
+
+.content-heading{
+    /* border-bottom: 3px solid rgba(255, 0, 0, 0.575); */
+    padding: 5px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.about-text{
+    margin-top: 10px;
+    /* padding-top: 10px; */
+    /* font-size: 1rem  ; */
+}
+
+/* .bg-color{
+    background-color: lightgrey;
+    padding: 10px;
+} */
