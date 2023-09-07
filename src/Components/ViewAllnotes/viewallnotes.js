@@ -18,7 +18,15 @@ export default function ViewAllnotes() {
   }, []);
 
   const handleDownload = (downloadLink) => {
-    window.location.href = downloadLink;
+    console.log('download link',downloadLink);
+    // window.location.href = downloadLink;
+    const link = document.createElement('a');
+    link.href= downloadLink;
+    //extract filename
+    link.download = downloadLink.substring(downloadLink.lastIndexOf('/') + 1);
+
+    //trigger click event on anchor element
+    link.click();
   };
 
   return (
@@ -51,8 +59,8 @@ export default function ViewAllnotes() {
                   <td>{note.uploadingDate}</td>
                   <td>{note.branch}</td>
                   <td>{note.subject}</td>
-                  <td> <button onClick={() => handleDownload(note.downloadLink)}>
-                      Download
+                  <td> <button onClick={() => handleDownload(note.filePath)}>
+                      Download <a href={note.filePath} download></a>
                     </button></td>
                   <td>{note.fileType}</td>
                   <td>{note.description}</td>
