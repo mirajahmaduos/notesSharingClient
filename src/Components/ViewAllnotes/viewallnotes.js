@@ -16,6 +16,7 @@ export default function ViewAllnotes() {
       .then(data => setNotes(data))
       .catch(error => console.error('Error fetching notes:', error));
   }, []);
+  console.log('notes....', notes);
 
   const handleDownload = (downloadLink) => {
     console.log('download link',downloadLink);
@@ -55,7 +56,7 @@ export default function ViewAllnotes() {
             {notes.map((note, index) => (
                 <tr key={index}>
                   <td>{index + 1}</td>
-                  <td>{note.uploadedBy}</td>
+                  <td>{note.user.name}</td>
                   <td>{note.uploadingDate}</td>
                   <td>{note.branch}</td>
                   <td>{note.subject}</td>

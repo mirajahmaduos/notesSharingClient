@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./upload.css";
 import UserNavbar from "../Navbar/usernavbar";
@@ -11,8 +11,13 @@ export default function Upload() {
     subject: '',
     fileType: '',
     description: '',
+    user: '',
   });
 
+  useEffect(() => {
+    const userId = localStorage.getItem('user');
+    setFormData({...formData, user:userId});
+  }, []);
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
   };
@@ -27,6 +32,7 @@ export default function Upload() {
       data.append('subject', formData.subject);
       data.append('fileType', formData.fileType);
       data.append('description', formData.description);
+      data.append('user', formData.user);
 
       try {
         const response = await axios.post('http://localhost:5000/upload', data);

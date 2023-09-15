@@ -35,6 +35,8 @@ export default function Login() {
     
             const data = await response.json();
             console.log("Response:", data);
+            console.log('user-id', data.user); 
+            localStorage.setItem('user', data.user);
     
             if (data.success) {
                 if (data.isAdmin) {
