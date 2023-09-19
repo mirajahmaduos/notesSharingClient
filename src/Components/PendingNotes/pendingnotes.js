@@ -52,7 +52,7 @@ console.log('notes',notes);
                 
                 <tr key={note._id}>
                   <td>{index + 1}</td> {/* Display serial number starting from 1 */}
-                  <td>{note.uploadedBy}</td>
+                  <td>{note.user.name}</td>
                   <td>{note.uploadingDate}</td>
                   <td>{note.branch}</td>
                   <td>{note.subject}</td>
